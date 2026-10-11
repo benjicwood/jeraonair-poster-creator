@@ -1,11 +1,11 @@
 <template>
   <div class="poster-content">
-    <!-- Thursday -->
+    <!-- Saturday -->
     <DayGrid
-      day="Thursday"
+      day="Saturday"
       slug="dayOne"
       :bands="days.dayOne"
-      :coHeadliner="coHeadliner.thursday"
+      :coHeadliner="coHeadliner.saturday"
       :alwaysHighlight="alwaysHighlight"
       :activeRowKey="
         activeSlug === 'dayOne' && isEditorVisible ? activeRowKey : null
@@ -30,12 +30,12 @@
       @open="openEditor"
     />
 
-    <!-- Saturday -->
+    <!-- Thursday -->
     <DayGrid
-      day="Saturday"
+      day="Thursday"
       slug="dayThree"
       :bands="days.dayThree"
-      :coHeadliner="coHeadliner.saturday"
+      :coHeadliner="coHeadliner.thursday"
       :alwaysHighlight="alwaysHighlight"
       :activeRowKey="
         activeSlug === 'dayThree' && isEditorVisible ? activeRowKey : null
@@ -299,10 +299,9 @@ export default {
 
     getAnalyticsDayLabel(slug) {
       const map = {
-        dayFour: "Wednesday",
-        dayOne: "Thursday",
+        dayOne: "Saturday",
         dayTwo: "Friday",
-        dayThree: "Saturday",
+        dayThree: "Thursday",
       };
 
       return map[slug] || slug;
